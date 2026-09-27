@@ -26,7 +26,7 @@ app.post("/api/search", (req, res) => {
         });
     }
 
-    const python = spawn("python", ["pinterest_api.py", url]);
+    const python = spawn("python3", ["pinterest_api.py", url]);
 
     let output = "";
     let errorOutput = "";
