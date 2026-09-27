@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PINTS Downloader</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Top Header -->
+    <header class="top-header">
+        <div class="brand">PINTS Downloader</div>
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="main-container">
+
+        <!-- P Logo -->
+        <div class="p-logo">P</div>
+
+        <!-- Heading -->
+        <h1>PINTS Downloader</h1>
+
+        <!-- Description -->
+        <p class="description">
+            Download your favorite videos quickly and easily.
+            Paste your link, search for your video, and choose the quality you want.
+        </p>
+
+
+        <!-- Search Area -->
+        <section class="search-section">
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="videoUrl"
+                    placeholder="Paste your link here..."
+                    autocomplete="off"
+                >
+
+                <button id="searchButton">
+                    <span>⌕</span>
+                    Search
+                </button>
+
+            </div>
+
+            <p class="search-hint">
+                Paste your link and press Enter or click Search
+            </p>
+
+        </section>
+
+
+        <!-- Loading -->
+        <div id="loading" class="loading hidden">
+            <div class="loader"></div>
+            <p>Searching...</p>
+        </div>
+
+
+        <!-- Results -->
+        <section id="results" class="results hidden">
+
+            <!-- Video Preview -->
+            <div class="preview-card">
+
+                <h2>Video Preview</h2>
+
+                <div class="video-container">
+                    <video id="videoPreview" controls playsinline></video>
+                </div>
+
+            </div>
+
+
+            <!-- Download Options -->
+            <div class="download-card">
+
+                <h2>Download Video</h2>
+
+                <p class="quality-description">
+                    Choose the quality you want to download.
+                </p>
+
+
+                <div class="download-list">
+
+                    <!-- Quality 1 -->
+                    <div class="download-option">
+
+                        <div class="quality-info">
+                            <strong>High Quality</strong>
+                            <span>Best available quality</span>
+                        </div>
+
+                        <button
+                            class="download-button"
+                            data-quality="high">
+                            Download
+                        </button>
+
+                    </div>
+
+
+                    <!-- Quality 2 -->
+                    <div class="download-option">
+
+                        <div class="quality-info">
+                            <strong>Medium Quality</strong>
+                            <span>Good quality and smaller size</span>
+                        </div>
+
+                        <button
+                            class="download-button"
+                            data-quality="medium">
+                            Download
+                        </button>
+
+                    </div>
+
+
+                    <!-- Quality 3 -->
+                    <div class="download-option">
+
+                        <div class="quality-info">
+                            <strong>Standard Quality</strong>
+                            <span>Smaller file size</span>
+                        </div>
+
+                        <button
+                            class="download-button"
+                            data-quality="standard">
+                            Download
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Error -->
+        <div id="errorMessage" class="error-message hidden">
+            Please enter a valid link and try again.
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        © 2026 PINTS Downloader
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
